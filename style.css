@@ -1,0 +1,102 @@
+:root {
+    --bg: #eaf7ff;
+    --card: #ffffff;
+    --text: #30445a;
+    --muted: #7890a5;
+    --primary: #78c8ee;
+    --secondary: #f5b9d0;
+    --border: #d5eaf5;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.app {
+    width: 100%;
+    max-width: 500px;
+    min-height: 90vh;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 30px rgba(80, 140, 180, 0.12);
+}
+
+.app-header {
+    text-align: center;
+    margin: 25px 0 40px;
+}
+
+.app-header h1 {
+    font-size: 28px;
+}
+
+.main-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    flex: 1;
+}
+
+.menu-button {
+    width: 100%;
+    min-height: 90px;
+    border: 2px solid var(--border);
+    border-radius: 22px;
+    background: var(--card);
+    color: var(--text);
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.menu-button:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary);
+}
+
+.menu-button:active {
+    transform: scale(0.98);
+}
+
+.bottom-navigation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.bottom-navigation button {
+    border: 2px solid var(--border);
+    border-radius: 18px;
+    background: var(--card);
+    color: var(--text);
+    padding: 14px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.bottom-navigation button:hover {
+    border-color: var(--secondary);
+}
