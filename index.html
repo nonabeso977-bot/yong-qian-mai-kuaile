@@ -2,87 +2,65 @@
 <html lang="ar" dir="rtl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>🌟 用钱买快乐 🌟</title>
+  <title>🌟 用钱买快乐 🌟</title>
 
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <main class="home-page">
+  <main class="home-page">
 
-        <header class="home-header">
-            <h1>🌟 用钱买快乐 🌟</h1>
-            <p>مكان صغير للرسم واللعب</p>
-        </header>
+    <header class="home-header">
+      <h1>🌟 用钱买快乐 🌟</h1>
+    </header>
 
+    <section class="rooms">
 
-        <section class="rooms">
+      <button class="room-card" id="groupDrawingButton" type="button">
+        <span>قروب رسم</span>
+      </button>
 
-            <button class="room-card" id="groupDrawingButton" type="button">
-                <span class="room-icon">🎨</span>
+      <button class="room-card" id="soloDrawingButton" type="button">
+        <span>رسم فردي</span>
+      </button>
 
-                <span class="room-info">
-                    <strong>قروب رسم</strong>
-                    <small>ارسم مع الآخرين</small>
-                </span>
-            </button>
+      <button class="room-card" id="guessButton" type="button">
+        <span>احزر</span>
+      </button>
 
+      <button class="room-card" id="classButton" type="button">
+        <span>فصل</span>
+      </button>
 
-            <button class="room-card" id="soloDrawingButton" type="button">
-                <span class="room-icon">🖌️</span>
+    </section>
 
-                <span class="room-info">
-                    <strong>رسم فردي</strong>
-                    <small>مساحتك الخاصة للرسم</small>
-                </span>
-            </button>
+    <nav class="bottom-navigation">
 
+      <button id="settingsButton" type="button">
+        <span>⚙️</span>
+        <span>الإعدادات</span>
+      </button>
 
-            <button class="room-card" id="guessButton" type="button">
-                <span class="room-icon">🔮</span>
+      <button id="infoButton" type="button">
+        <span>ⓘ</span>
+        <span>معلومات</span>
+      </button>
 
-                <span class="room-info">
-                    <strong>احزر</strong>
-                    <small>ارسم وخليهم يخمنوا</small>
-                </span>
-            </button>
+      <button id="profileButton" type="button">
+        <span>👤</span>
+        <span>الحساب</span>
+      </button>
 
+    </nav>
 
-            <button class="room-card" id="classButton" type="button">
-                <span class="room-icon">🏫</span>
+  </main>
 
-                <span class="room-info">
-                    <strong>فصل</strong>
-                    <small>فصل خاص بالرسم واللعب</small>
-                </span>
-            </button>
-
-        </section>
-
-
-        <nav class="bottom-navigation">
-
-            <button id="profileButton" type="button">
-                <span>👤</span>
-                <span>الحساب</span>
-            </button>
-
-            <button id="settingsButton" type="button">
-                <span>⚙️</span>
-                <span>الإعدادات</span>
-            </button>
-
-        </nav>
-
-    </main>
-
-
-    <script src="themes.js"></script>
-    <script src="script.js"></script>
+  <script src="themes.js"></script>
+  <script src="script.js"></script>
 
 </body>
 
