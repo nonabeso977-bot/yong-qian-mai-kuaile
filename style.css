@@ -1,11 +1,15 @@
 :root {
-    --bg: #eaf7ff;
+    --bg: #f4f0ff;
     --card: #ffffff;
-    --text: #30445a;
-    --muted: #7890a5;
-    --primary: #78c8ee;
-    --secondary: #f5b9d0;
-    --border: #d5eaf5;
+    --text: #4a4263;
+    --muted: #9a91b0;
+    --primary: #8b6cff;
+    --secondary: #cbbfff;
+    --border: #e5defc;
+    --nav: #ffffff;
+
+    --shadow: 0 10px 35px rgba(100, 80, 160, 0.12);
+    --soft-shadow: 0 5px 18px rgba(100, 80, 160, 0.08);
 }
 
 * {
@@ -19,84 +23,353 @@ body {
     background: var(--bg);
     color: var(--text);
     font-family: Arial, sans-serif;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+
+    padding: 18px;
 }
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================
+   التطبيق
+========================= */
 
 .app {
     width: 100%;
-    max-width: 500px;
-    min-height: 90vh;
+    max-width: 520px;
+    min-height: 92vh;
+
     background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 28px;
-    padding: 25px 20px;
+
+    border: 2px solid var(--border);
+    border-radius: 32px;
+
+    padding: 25px 20px 20px;
+
     display: flex;
     flex-direction: column;
-    box-shadow: 0 8px 30px rgba(80, 140, 180, 0.12);
+
+    box-shadow: var(--shadow);
 }
+
+
+/* =========================
+   العنوان
+========================= */
 
 .app-header {
     text-align: center;
-    margin: 25px 0 40px;
+    padding: 18px 10px 32px;
 }
 
 .app-header h1 {
-    font-size: 28px;
+    font-size: 27px;
+    font-weight: 800;
+    color: var(--text);
+
+    line-height: 1.5;
 }
+
+
+/* =========================
+   أزرار الصفحة الرئيسية
+========================= */
 
 .main-menu {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 16px;
+
     flex: 1;
 }
 
+
 .menu-button {
     width: 100%;
-    min-height: 90px;
+    min-height: 92px;
+
     border: 2px solid var(--border);
-    border-radius: 22px;
+    border-radius: 24px;
+
     background: var(--card);
     color: var(--text);
-    font-size: 22px;
+
+    font-size: 21px;
     font-weight: bold;
+
     cursor: pointer;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
-    transition: transform 0.15s ease, border-color 0.15s ease;
+
+    gap: 13px;
+
+    box-shadow: var(--soft-shadow);
+
+    transition:
+        transform 0.15s ease,
+        border-color 0.15s ease,
+        box-shadow 0.15s ease,
+        background 0.15s ease;
 }
 
 .menu-button:hover {
     transform: translateY(-2px);
-    border-color: var(--primary);
+
+    border-color: var(--secondary);
+
+    box-shadow:
+        0 8px 22px rgba(100, 80, 160, 0.13);
 }
 
 .menu-button:active {
     transform: scale(0.98);
 }
 
+
+/* =========================
+   ألوان خفيفة للأزرار
+========================= */
+
+#groupDrawingButton {
+    background: #faf8ff;
+}
+
+#soloDrawingButton {
+    background: #fffafd;
+}
+
+#guessButton {
+    background: #f8fbff;
+}
+
+
+/* =========================
+   الشريط السفلي
+========================= */
+
 .bottom-navigation {
     display: grid;
     grid-template-columns: 1fr 1fr;
+
     gap: 12px;
-    margin-top: 30px;
+
+    margin-top: 28px;
 }
 
+
 .bottom-navigation button {
+    min-height: 62px;
+
     border: 2px solid var(--border);
-    border-radius: 18px;
-    background: var(--card);
+    border-radius: 20px;
+
+    background: var(--nav);
     color: var(--text);
-    padding: 14px 10px;
+
     font-size: 16px;
+    font-weight: bold;
+
     cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    box-shadow: var(--soft-shadow);
+
+    transition:
+        transform 0.15s ease,
+        border-color 0.15s ease;
 }
 
 .bottom-navigation button:hover {
+    transform: translateY(-2px);
     border-color: var(--secondary);
+}
+
+.bottom-navigation button:active {
+    transform: scale(0.98);
+}
+
+
+/* =========================
+   صفحات الإعدادات
+========================= */
+
+.page-header {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 28px;
+}
+
+.page-header h1 {
+    flex: 1;
+
+    text-align: center;
+
+    font-size: 25px;
+}
+
+
+.back-button {
+    width: 46px;
+    height: 46px;
+
+    border: 2px solid var(--border);
+    border-radius: 16px;
+
+    background: var(--card);
+    color: var(--text);
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    box-shadow: var(--soft-shadow);
+}
+
+.back-button:active {
+    transform: scale(0.96);
+}
+
+
+/* =========================
+   قائمة الإعدادات
+========================= */
+
+.settings-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    flex: 1;
+}
+
+
+.settings-item {
+    width: 100%;
+
+    min-height: 72px;
+
+    padding: 12px 14px;
+
+    border: 2px solid var(--border);
+    border-radius: 20px;
+
+    background: var(--card);
+    color: var(--text);
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    text-align: right;
+
+    box-shadow: var(--soft-shadow);
+
+    transition:
+        transform 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.settings-item:hover {
+    transform: translateY(-1px);
+    border-color: var(--secondary);
+}
+
+.settings-icon {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    border-radius: 14px;
+
+    background: #f4f0ff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 21px;
+}
+
+.settings-text {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.settings-text strong {
+    font-size: 16px;
+}
+
+.settings-text small {
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+.settings-arrow {
+    color: var(--muted);
+    font-size: 25px;
+}
+
+
+/* =========================
+   الهاتف
+========================= */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .app {
+        min-height: 96vh;
+        border-radius: 28px;
+
+        padding:
+            20px 15px 15px;
+    }
+
+    .app-header {
+        padding-top: 14px;
+        padding-bottom: 28px;
+    }
+
+    .app-header h1 {
+        font-size: 24px;
+    }
+
+    .menu-button {
+        min-height: 86px;
+        font-size: 19px;
+        border-radius: 22px;
+    }
+
+    .bottom-navigation button {
+        min-height: 58px;
+    }
 }
